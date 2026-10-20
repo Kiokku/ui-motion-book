@@ -1,0 +1,335 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-20T01:18:55.207154+00:00",
+  "title": "Design System: 感知之书",
+  "extensions": {
+    "colorMeta": {
+      "primary": {
+        "role": "primary",
+        "displayName": "实验蓝",
+        "canonical": "oklch(.505 .19 259)",
+        "tonalRamp": [
+          "oklch(.15 0.19 259)",
+          "oklch(.25 0.19 259)",
+          "oklch(.35 0.19 259)",
+          "oklch(.45 0.19 259)",
+          "oklch(.6 0.19 259)",
+          "oklch(.75 0.19 259)",
+          "oklch(.85 0.19 259)",
+          "oklch(.95 0.19 259)"
+        ]
+      },
+      "primary-hover": {
+        "role": "primary",
+        "displayName": "悬停实验蓝",
+        "canonical": "oklch(.45 .18 259)",
+        "tonalRamp": [
+          "oklch(.15 0.18 259)",
+          "oklch(.25 0.18 259)",
+          "oklch(.35 0.18 259)",
+          "oklch(.45 0.18 259)",
+          "oklch(.6 0.18 259)",
+          "oklch(.75 0.18 259)",
+          "oklch(.85 0.18 259)",
+          "oklch(.95 0.18 259)"
+        ]
+      },
+      "bg": {
+        "role": "neutral",
+        "displayName": "白纸",
+        "canonical": "oklch(1 0 0)",
+        "tonalRamp": [
+          "oklch(.15 0 0)",
+          "oklch(.25 0 0)",
+          "oklch(.35 0 0)",
+          "oklch(.45 0 0)",
+          "oklch(.6 0 0)",
+          "oklch(.75 0 0)",
+          "oklch(.85 0 0)",
+          "oklch(.95 0 0)"
+        ]
+      },
+      "panel": {
+        "role": "neutral",
+        "displayName": "冷灰纸",
+        "canonical": "oklch(.978 .006 255)",
+        "tonalRamp": [
+          "oklch(.15 0.006 255)",
+          "oklch(.25 0.006 255)",
+          "oklch(.35 0.006 255)",
+          "oklch(.45 0.006 255)",
+          "oklch(.6 0.006 255)",
+          "oklch(.75 0.006 255)",
+          "oklch(.85 0.006 255)",
+          "oklch(.95 0.006 255)"
+        ]
+      },
+      "panel-blue": {
+        "role": "neutral",
+        "displayName": "实验浅蓝",
+        "canonical": "oklch(.967 .014 255)",
+        "tonalRamp": [
+          "oklch(.15 0.014 255)",
+          "oklch(.25 0.014 255)",
+          "oklch(.35 0.014 255)",
+          "oklch(.45 0.014 255)",
+          "oklch(.6 0.014 255)",
+          "oklch(.75 0.014 255)",
+          "oklch(.85 0.014 255)",
+          "oklch(.95 0.014 255)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "墨色",
+        "canonical": "oklch(.245 .035 260)",
+        "tonalRamp": [
+          "oklch(.15 0.035 260)",
+          "oklch(.25 0.035 260)",
+          "oklch(.35 0.035 260)",
+          "oklch(.45 0.035 260)",
+          "oklch(.6 0.035 260)",
+          "oklch(.75 0.035 260)",
+          "oklch(.85 0.035 260)",
+          "oklch(.95 0.035 260)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "注释灰",
+        "canonical": "oklch(.485 .035 260)",
+        "tonalRamp": [
+          "oklch(.15 0.035 260)",
+          "oklch(.25 0.035 260)",
+          "oklch(.35 0.035 260)",
+          "oklch(.45 0.035 260)",
+          "oklch(.6 0.035 260)",
+          "oklch(.75 0.035 260)",
+          "oklch(.85 0.035 260)",
+          "oklch(.95 0.035 260)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "分隔线",
+        "canonical": "oklch(.897 .019 255)",
+        "tonalRamp": [
+          "oklch(.15 0.019 255)",
+          "oklch(.25 0.019 255)",
+          "oklch(.35 0.019 255)",
+          "oklch(.45 0.019 255)",
+          "oklch(.6 0.019 255)",
+          "oklch(.75 0.019 255)",
+          "oklch(.85 0.019 255)",
+          "oklch(.95 0.019 255)"
+        ]
+      },
+      "nav-active": {
+        "role": "neutral",
+        "displayName": "导航浅蓝",
+        "canonical": "oklch(.925 .034 255)",
+        "tonalRamp": [
+          "oklch(.15 0.034 255)",
+          "oklch(.25 0.034 255)",
+          "oklch(.35 0.034 255)",
+          "oklch(.45 0.034 255)",
+          "oklch(.6 0.034 255)",
+          "oklch(.75 0.034 255)",
+          "oklch(.85 0.034 255)",
+          "oklch(.95 0.034 255)"
+        ]
+      },
+      "accent": {
+        "role": "secondary",
+        "displayName": "观察琥珀",
+        "canonical": "oklch(.75 .145 70)",
+        "tonalRamp": [
+          "oklch(.15 0.145 70)",
+          "oklch(.25 0.145 70)",
+          "oklch(.35 0.145 70)",
+          "oklch(.45 0.145 70)",
+          "oklch(.6 0.145 70)",
+          "oklch(.75 0.145 70)",
+          "oklch(.85 0.145 70)",
+          "oklch(.95 0.145 70)"
+        ]
+      },
+      "success": {
+        "role": "secondary",
+        "displayName": "确认绿",
+        "canonical": "oklch(.4 .09 165)",
+        "tonalRamp": [
+          "oklch(.15 0.09 165)",
+          "oklch(.25 0.09 165)",
+          "oklch(.35 0.09 165)",
+          "oklch(.45 0.09 165)",
+          "oklch(.6 0.09 165)",
+          "oklch(.75 0.09 165)",
+          "oklch(.85 0.09 165)",
+          "oklch(.95 0.09 165)"
+        ]
+      },
+      "error": {
+        "role": "secondary",
+        "displayName": "反馈红",
+        "canonical": "oklch(.46 .14 35)",
+        "tonalRamp": [
+          "oklch(.15 0.14 35)",
+          "oklch(.25 0.14 35)",
+          "oklch(.35 0.14 35)",
+          "oklch(.45 0.14 35)",
+          "oklch(.6 0.14 35)",
+          "oklch(.75 0.14 35)",
+          "oklch(.85 0.14 35)",
+          "oklch(.95 0.14 35)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "封面宋体",
+        "purpose": "封面中文标题。"
+      },
+      "headline": {
+        "displayName": "章节宋体",
+        "purpose": "章节主标题；随现有断点缩小。"
+      },
+      "title": {
+        "displayName": "小节宋体",
+        "purpose": "小节与实验标题。"
+      },
+      "body": {
+        "displayName": "阅读正文",
+        "purpose": "本地 Manrope 与系统中文黑体。"
+      },
+      "label": {
+        "displayName": "控制与说明",
+        "purpose": "紧凑的导航和实验辅助文字。"
+      },
+      "code": {
+        "displayName": "代码与参数",
+        "purpose": "代码与曲线参数。"
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "ease",
+        "value": "cubic-bezier(.23,1,.32,1)",
+        "purpose": "现有默认缓动；教学实验提供其他曲线对照。"
+      },
+      {
+        "name": "tactile",
+        "value": "160ms",
+        "purpose": "触感实验按压与目录箭头的短过渡。"
+      },
+      {
+        "name": "easing-playback",
+        "value": "240ms",
+        "purpose": "缓动实验正常播放时长；5 倍慢速为 1200ms。"
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "wide-cover",
+        "value": "1700px"
+      },
+      {
+        "name": "source-editor-dialog",
+        "value": "1100px"
+      },
+      {
+        "name": "compact-desktop",
+        "value": "1000px"
+      },
+      {
+        "name": "mobile",
+        "value": "700px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "主要按钮",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "主要阅读与练习动作。",
+      "html": "<button class=\"ds-primary\">开始阅读 →</button>",
+      "css": "button,input,a{font-family:Manrope,'PingFang SC','Microsoft YaHei',sans-serif}button{cursor:pointer}button:active{opacity:.8}button:focus-visible,input:focus-visible,a:focus-visible{outline:2px solid var(--primary,oklch(.505 .19 259));outline-offset:4px}.ds-primary{display:inline-flex;align-items:center;gap:15px;background:var(--primary,oklch(.505 .19 259));color:white;padding:13px 20px;border:0;border-radius:6px;font-size:12px;font-weight:600;min-height:44px}.ds-primary:hover{background:oklch(.45 .18 259)}"
+    },
+    {
+      "name": "次要按钮",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "实验播放与辅助动作。",
+      "html": "<button class=\"ds-secondary\">播放</button>",
+      "css": "button,input,a{font-family:Manrope,'PingFang SC','Microsoft YaHei',sans-serif}button{cursor:pointer}button:active{opacity:.8}button:focus-visible,input:focus-visible,a:focus-visible{outline:2px solid var(--primary,oklch(.505 .19 259));outline-offset:4px}.ds-secondary{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line,oklch(.897 .019 255));border-radius:6px;padding:9px 13px;font-size:11px;min-height:38px;background:var(--bg,white);color:var(--ink,oklch(.245 .035 260))}.ds-secondary:hover{background:var(--panel-blue,oklch(.967 .014 255));border-color:oklch(.75 .07 255)}"
+    },
+    {
+      "name": "文本输入",
+      "kind": "input",
+      "refersTo": "text-input",
+      "description": "有明确标签的实验文本输入。",
+      "html": "<label class=\"ds-label\">试一个名字<input class=\"ds-input\" placeholder=\"替换第一位成员的名字\"></label>",
+      "css": "button,input,a{font-family:Manrope,'PingFang SC','Microsoft YaHei',sans-serif}button{cursor:pointer}button:active{opacity:.8}button:focus-visible,input:focus-visible,a:focus-visible{outline:2px solid var(--primary,oklch(.505 .19 259));outline-offset:4px}.ds-label{display:block;font:11px Manrope,sans-serif;color:var(--muted,oklch(.485 .035 260))}.ds-input{display:block;width:100%;border:1px solid var(--line,oklch(.897 .019 255));background:var(--bg,white);color:var(--ink,oklch(.245 .035 260));padding:10px;margin-top:8px;border-radius:5px;font-size:16px;caret-color:var(--primary,oklch(.505 .19 259))}.ds-input::placeholder{color:var(--muted,oklch(.485 .035 260));opacity:1}"
+    },
+    {
+      "name": "章节导航",
+      "kind": "nav",
+      "refersTo": "chapter-navigation-active",
+      "description": "浅蓝底与文字共同标记当前章节。",
+      "html": "<nav class=\"ds-nav\"><button aria-current=\"page\"><small>02</small> 缓动，让回应有分寸</button><button><small>03</small> 理解运行时</button></nav>",
+      "css": "button,input,a{font-family:Manrope,'PingFang SC','Microsoft YaHei',sans-serif}button{cursor:pointer}button:active{opacity:.8}button:focus-visible,input:focus-visible,a:focus-visible{outline:2px solid var(--primary,oklch(.505 .19 259));outline-offset:4px}.ds-nav{padding:8px;background:var(--panel,oklch(.978 .006 255))}.ds-nav button{display:flex;gap:9px;width:100%;text-align:left;border:0;border-radius:5px;padding:11px 9px;background:transparent;color:var(--muted,oklch(.485 .035 260));font-size:12px;line-height:1.6}.ds-nav button[aria-current]{background:oklch(.925 .034 255);color:var(--primary,oklch(.505 .19 259));font-weight:600}.ds-nav button:hover{background:oklch(.94 .015 255);color:var(--ink,oklch(.245 .035 260))}.ds-nav small{font-size:10px;font-variant-numeric:tabular-nums}"
+    },
+    {
+      "name": "实验分段控制",
+      "kind": "custom",
+      "refersTo": "segment-active",
+      "description": "选中曲线或教学对照。",
+      "html": "<div class=\"ds-segments\"><button aria-pressed=\"true\">Ease-out</button><button aria-pressed=\"false\">Linear</button></div>",
+      "css": "button,input,a{font-family:Manrope,'PingFang SC','Microsoft YaHei',sans-serif}button{cursor:pointer}button:active{opacity:.8}button:focus-visible,input:focus-visible,a:focus-visible{outline:2px solid var(--primary,oklch(.505 .19 259));outline-offset:4px}.ds-segments{display:flex;gap:3px;flex-wrap:wrap;padding:3px;background:var(--panel,oklch(.978 .006 255));border:1px solid var(--line,oklch(.897 .019 255));border-radius:7px}.ds-segments button{font-size:11px;padding:8px 11px;border:0;border-radius:4px;background:transparent;color:var(--muted,oklch(.485 .035 260));flex:1;line-height:1.5;min-height:33px}.ds-segments button[aria-pressed=true]{background:var(--primary,oklch(.505 .19 259));color:white}"
+    },
+    {
+      "name": "实验表面",
+      "kind": "card",
+      "refersTo": "experiment",
+      "description": "浅蓝实验外层与白色操作舞台。",
+      "html": "<section class=\"ds-experiment\"><span>● 亲手感受</span><h2>相同的时间，不同的感觉。</h2><p>调整与比较，观察变化。</p><div class=\"ds-stage\">时间 35% · 完成进度</div></section>",
+      "css": "button,input,a{font-family:Manrope,'PingFang SC','Microsoft YaHei',sans-serif}button{cursor:pointer}button:active{opacity:.8}button:focus-visible,input:focus-visible,a:focus-visible{outline:2px solid var(--primary,oklch(.505 .19 259));outline-offset:4px}.ds-experiment{padding:24px;background:var(--panel-blue,oklch(.967 .014 255));border:1px solid var(--line,oklch(.897 .019 255));border-radius:9px;color:var(--ink,oklch(.245 .035 260));font-family:Manrope,sans-serif}.ds-experiment>span{font-size:10px;color:var(--primary,oklch(.505 .19 259))}.ds-experiment h2{font-family:var(--display,\"Songti SC\",serif);font-size:25px;line-height:1.6;margin:16px 0 8px}.ds-experiment p{font-size:12px;line-height:1.9;color:var(--muted,oklch(.485 .035 260));margin:0 0 24px}.ds-stage{background:var(--bg,white);border-radius:7px;padding:20px;font-size:11px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "安静精密的设计实验室",
+    "overview": "以长时间中文阅读和自主探索为中心。白色正文、浅蓝灰目录与准确的蓝色图形建立安静、精密、清楚的阅读空间；宋体标题保留书籍感，系统中文黑体与本地 Manrope 承担解释、控制与读数。\n\n实验解释一个明确概念，正文维持连续的阅读顺序。封面直接呈现可操作的缓动实验，读者通过比较、操作和即时反馈建立判断；15 类实验共用同一套浅色表面与语义颜色。",
+    "keyCharacteristics": [
+      "白色正文与浅蓝灰辅助区域。",
+      "宋体层级、清晰正文、可核对的图形与读数。",
+      "宽屏可收起目录、正文与实验、原文编辑器并列阅读。",
+      "克制的阅读界面与可主动操作的实验。"
+    ],
+    "rules": [
+      {
+        "name": "The Semantic Color Rule",
+        "body": "状态与实验角色必须同时提供文字、形状或读数，颜色用于辅助区分。",
+        "section": "colors"
+      },
+      {
+        "name": "The Computed Evidence Rule",
+        "body": "曲线、当前位置与文字读数来自同一计算，视觉不能暗示与实际参数不同的进度。",
+        "section": "components"
+      }
+    ],
+    "dos": [
+      "Do 保持正文可复制、可缩放，提供可见焦点与触屏可操作的控制。",
+      "Do 用真实可操作的实验配合说明、边界与文字读数。",
+      "Do 在所有章节、术语索引、复习与来源页复用浅色阅读系统。",
+      "Do 把术语放在章节上下文中，并保留完整索引入口。"
+    ],
+    "donts": [
+      "Don't 用重复卡片打断普通正文的阅读顺序。",
+      "Don't 用持续循环的装饰运动争夺正文注意力。",
+      "Don't 把浏览器教学模型表达为真实设备性能检测。",
+      "Don't 在减少动态效果时移除实验的静态解释与结果。"
+    ]
+  }
+}

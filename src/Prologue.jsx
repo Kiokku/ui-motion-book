@@ -1,0 +1,21 @@
+import React,{useState} from 'react';
+import {ArrowUpRight} from 'lucide-react';
+import {revision} from './content';
+
+const stages=[
+ {name:'明确任务',question:'先说明用户要完成什么',input:'项目列表需要一个“更多操作”菜单。用户每天反复处理项目，主要使用鼠标，也使用键盘。',skills:['emil-design-eng','animation-vocabulary'],output:'确定频率、输入方式、反馈目的，统一“入场、退出、锚点”等词的含义。',prompt:'请使用 emil-design-eng 分析项目菜单。先判断哪些交互不该动画，再说明反馈与空间关系的目的。先给判断依据。',check:'能解释为什么需要或不需要动效，而不只说“更有质感”。'},
+ {name:'探索方案',question:'问题还没确定时，先比较',input:'还不确定批量操作放在行内、菜单中，还是集中工具栏。',skills:['prototype','find-animation-opportunities'],output:'用相同数据和任务比较不同操作结构，再筛选真正有助于理解的动效机会。',prompt:'请使用 prototype 比较项目操作的三种结构。用相同数据与任务，写明各自的收益和代价；选定结构后，再用 find-animation-opportunities 筛选动效。',check:'原型回答结构问题；动效建议同时说明哪些地方保持静止。'},
+ {name:'实现交互',question:'选定行为，再选择实现',input:'已确定菜单结构，需要实现定位、焦点、关闭、反馈与入退场。',skills:['pick-ui-library','animate','apple-design','ask-sonner','animate-expo','write-swift'],output:'Web 用现有基础组件承接行为，再用 animate 实现必要运动。连续手势参考 apple-design；通知查 ask-sonner。Expo 与 Swift 项目走各自的平台路线。',prompt:'这是 Web 项目。请先检查已有依赖，用 pick-ui-library 确认菜单基础组件，再用 animate 实现偶尔打开的鼠标菜单。沿用项目 token，交代键盘行为、中断、退出和减少动态效果方案。',check:'得到可运行的行为与明确参数。Expo、Swift 是按平台替换的分支，无需全部使用。'},
+ {name:'检验结果',question:'正常打开一次，还不够',input:'菜单已能使用，需要检查快速开关、页面忙碌、触屏和极端内容。',skills:['review-animations','animation-performance','mobile-native','break-ui'],output:'分别检查运动质量、实际帧耗时、移动浏览器行为和真实边界数据。发现问题时给出可复现证据。',prompt:'请使用 review-animations 审查这个菜单，输出修改前、修改后与原因。若有掉帧，再用 animation-performance 定位；另用 break-ui 检查真实长标签与缺失数据，手机问题用 mobile-native 单独验证。',check:'记录正常、反向、中断、静阅、长文本和键盘操作；手势在真实设备上确认。'},
+ {name:'持续改进',question:'局部修好后，再看全局',input:'多个页面的菜单、抽屉和通知出现重复问题，希望安排一轮改进。',skills:['improve-animations'],output:'建立全局动效清单，按用户影响和成本排序，产出可以交接的修复计划。',prompt:'请用 improve-animations 审计项目动效。先只读调查，给出优先级和独立可执行的计划；把审计、实施和验证三个阶段分开记录。',check:'每份计划注明位置、证据、目标、边界和验收方式；写完计划不算已修复。'}
+];
+
+export default function Prologue({go}){
+ const [step,setStep]=useState(0),current=stages[step];
+ return <section className="prologue" id="skill-background" aria-labelledby="skill-background-title">
+  <div className="prologue-intro prose-section"><h2 id="skill-background-title">Skill，把经验带进开发现场。</h2><p>本书中的 Skill 有一个具体含义：它是给 AI 编程助手阅读的一份专业工作说明。核心文件叫 <code>SKILL.md</code>，说明“什么任务适合用我、按什么顺序判断、遵守什么原则、交付什么结果”；复杂技能还会附带配方、模板或参考文件。</p><p>在支持 Agent Skills 的工具中，助手通常先看到技能名称与描述，在任务需要时加载正文，再按需读取附属资料。它把经验放进当前任务的上下文；读者仍需要判断任务是否合适、规则是否适用、结果是否真的改善了体验。不同工具的触发方式有所不同，明确写出技能名和具体任务通常更容易表达意图。</p><p className="source-note">格式依据：<a href="https://agentskills.io/home" target="_blank" rel="noreferrer">Agent Skills 官方说明 <ArrowUpRight size={11}/></a></p></div>
+  <div className="prose-section"><h2>为什么从 Emil 的这组技能开始？</h2><p>Emil Kowalski 在仓库中把这些规则归纳为自己在 Vercel、Linear 等公司的设计工程经验：AI 可以生成可运行的界面，却可能在缓动、响应、默认行为等小处持续做错选择。Skills 将这些细小判断写下来，让经验可以反复参与开发。</p><p>这个仓库包含动效构建、审查、性能诊断、原型探索、移动适配、组件选型，也包含 Expo 与 Swift。它们各自解决不同问题。原作者强调，专业能力仍值得亲自学习；本书因此先解释判断的理由，再让你用实验和真实项目检验理解。</p><p className="source-note">背景依据：<a href={`https://github.com/emilkowalski/skills/blob/${revision}/README.md`} target="_blank" rel="noreferrer">原仓库 README · 本书固定版本 <ArrowUpRight size={11}/></a></p></div>
+  <section className="workflow" aria-labelledby="workflow-title"><h2 id="workflow-title">把 Skill 放进一次真实开发</h2><p>以“为项目列表开发一个操作菜单”为例。选择下面的阶段，查看输入、适合的技能、预期产出与验收问题。这是一条教学建议路线，并非每个项目必须走完的固定工序。</p><div className="workflow-steps" role="group" aria-label="页面开发阶段">{stages.map((stage,i)=><button key={stage.name} aria-pressed={step===i} onClick={()=>setStep(i)}><span>{i+1}</span>{stage.name}</button>)}</div><div className="workflow-body" aria-live="polite"><h3>{current.question}</h3><dl><div><dt>带入现场</dt><dd>{current.input}</dd></div><div><dt>选择技能</dt><dd className="skill-links">{current.skills.map(id=><button key={id} onClick={()=>go(id)}>{id}<ArrowUpRight size={12}/></button>)}</dd></div><div><dt>期待产出</dt><dd>{current.output}</dd></div><div><dt>怎样验收</dt><dd>{current.check}</dd></div></dl><details className="prompt-example"><summary>查看这一阶段的提问示例</summary><p>{current.prompt}</p></details></div></section>
+  <div className="prose-section"><h2>使用前，先给出任务的边界</h2><p>告诉助手：哪个页面或组件、用户要完成什么、使用频率、输入设备、技术栈与已有依赖，以及希望得到建议、实现还是审查。附上当前代码和可复现问题，比只说“请做得高级一些”更有用。</p><p>例如，“菜单在快速开关时跳回起点，请检查中断行为”适合审查已有动效；“不知道哪里值得加运动”适合寻找机会。原型探索和全局审计也有各自的交付形式。不要一次调用所有技能，让几个不同任务互相争夺注意力。</p><p>阅读时，先用自己的话预测，再操作实验，最后把判断带到项目中。原文的参数是作者经验起点；本书标出的教学简化、浏览器模型和平台边界同样属于你需要理解的内容。</p></div>
+ </section>
+}
