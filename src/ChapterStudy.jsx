@@ -2,6 +2,7 @@ import React,{useMemo,useState} from 'react';
 import {sourceRoot} from './content';
 import {skillDocument} from './skillSource';
 import {vocabulary} from './vocabulary';
+import {DialogStudy,MomentumStudy,PropertyStudy} from './LearningLabs';
 
 const snippets={
  'write-swift':{
@@ -18,10 +19,10 @@ const snippets={
 
 export function LessonGuide({chapter}){return <div className="chapter-guide lesson-guide"><h2>本章阅读地图</h2><p>{chapter.id==='write-swift'?'可以分三次阅读：状态与错误、并发与抽象、性能与迁移。每次选一个问题，试着把判断理由解释清楚。':'先理解技能的用途与判断顺序，再对照案例，最后不看正文，试着独立回答问题。'}</p><details><summary>展开 {chapter.sections.length} 个主题</summary><nav aria-label="本章主题导航">{chapter.sections.map(([title],i)=><a key={title} href={`#section-${i}`} onClick={e=>{e.preventDefault();document.getElementById(`section-${i}`)?.scrollIntoView()}}><span>{i+1}</span>{title}</a>)}</nav></details></div>}
 
-export function LessonSectionStudy({chapter,section}){
+export function LessonSectionStudy({chapter,section,reduce}){
  const study=chapter.worked?.section===section?chapter.worked:null;
  const snippet=snippets[chapter.id]?.[section];
- return <>{study&&<div className="reading-table lesson-case"><table><caption>{study.title}</caption><thead><tr>{study.headers.map(header=><th key={header} scope="col">{header}</th>)}</tr></thead><tbody>{study.rows.map((row,i)=><tr key={i}>{row.map((cell,j)=><td key={j}>{cell}</td>)}</tr>)}</tbody></table></div>}{snippet&&<details className="reference-panel lesson-code"><summary>{snippet[0]}<span>展开代码 +</span></summary><div><pre><code>{snippet[1]}</code></pre><p>教学片段，用于解释本节判断；未作为独立程序在本书中编译验证。接入时补齐上下文并核对版本。</p></div></details>}{chapter.id==='animation-vocabulary'&&section===6&&<VocabularyIndex/>}</>
+ return <>{chapter.id==='animate'&&section===4&&<DialogStudy reduce={reduce}/>}{chapter.id==='apple-design'&&section===3&&<MomentumStudy reduce={reduce}/>}{chapter.id==='animation-performance'&&section===2&&<PropertyStudy reduce={reduce}/>}{study&&<div className="reading-table lesson-case"><table><caption>{study.title}</caption><thead><tr>{study.headers.map(header=><th key={header} scope="col">{header}</th>)}</tr></thead><tbody>{study.rows.map((row,i)=><tr key={i}>{row.map((cell,j)=><td key={j}>{cell}</td>)}</tr>)}</tbody></table></div>}{snippet&&<details className="reference-panel lesson-code"><summary>{snippet[0]}<span>展开代码 +</span></summary><div><pre><code>{snippet[1]}</code></pre><p>教学片段，用于解释本节判断；未作为独立程序在本书中编译验证。接入时补齐上下文并核对版本。</p></div></details>}{chapter.id==='animation-vocabulary'&&section===6&&<VocabularyIndex/>}</>
 }
 
 function VocabularyIndex(){

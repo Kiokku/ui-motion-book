@@ -30,7 +30,11 @@ const topics={
  'pick-ui-library':[[],[/How to use/],[/The list/,/UI components/],[/Motion & visuals/],[/^Charts$/, /Interaction & performance/,/State & styling/],[/Common mismatches/],[]],
  'mobile-native':[[/Operating Posture/,/Hard Rules/,/The Symptom Table/,/The Fixes/],[/Hover state/,/Gray\/blue/],[/Layout has/,/Page zooms/],[/Tap feels/,/Pull-to-refresh/],[/Content stops/,/Long-press/],[/Carousel scrolls/],[/Status bar/],[/Right in Chrome/,/Output/,/Tone/],[/Baseline/,/Never Ship/]],
  'break-ui':[[/Operating Posture/,/Hard Rules/],[/Workflow/,/Phase 1/],[/Phase 2/],[/Phase 3/],[/Phase 4/,/Failure signatures/],[/Truncate, wrap/],[],[/Phase 5/,/Phase 6/,/Required Output/,/Part 1/,/Part 2/,/Part 3/,/Invocation Variants/],[/Tone/]],
- 'ask-sonner':[[],[/Setup/],[/Picking the right call/],[/Recipes/],[/Styling/],[],[/Troubleshooting/],[]]
+ 'ask-sonner':[[],[/Setup/],[/Picking the right call/],[/Recipes/],[/Styling/],[],[/Troubleshooting/],[]],
+ 'choreograph':[[/Operating Posture/,/Hard Rules/],[/Cast the Elements/],[/Pick the Relationship/,/Together, by default/],[/Overlap: the stagger/],[/Sync Secondary/,/Adapt Timing/],[/Sequence: when to wait/,/Direction and Exits/],[/Interruption/,/Attention Loops/,/Reduced Motion/],[/Implementation/,/Workflow/,/Required Output/,/Part 1/,/Part 2/,/Part 3/,/Tone/]],
+ 'gestures':[[/First decision/,/The two phases/],[/Track phase/],[/Release phase/],[/Interruptibility/,/Motion drag props/],[/Linked values/],[/Spatial consistency/,/Touch checklist/],[/Sheets without/,/Hold gestures/],[/Reduced motion/,/When it still/]],
+ 'remove-animations':[[/Operating Posture/,/Hard Rules/],[/The Gate/],[/Reducing/],[/Removal Hazards/],[],[/Cleanup/],[/Required Output/,/Part 1/,/Part 2/,/Part 3/],[/Where to Hunt/,/Workflow/,/Tone/]],
+ 'learn-taste':[[/Hard Rules/],[/Workflow/,/Phase 1/],[/Phase 2/],[/Phase 3/],[],[/Phase 4/,/Make it a check/],[/Phase 5/,/Phase 6/,/Required Output/,/Rules to add/,/Needs your answer/,/Conflicts/,/Skipped/],[/Invocation Variants/]]
 };
 
 // A few long source sections contain several separately taught concepts.

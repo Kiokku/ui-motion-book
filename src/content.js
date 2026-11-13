@@ -1,5 +1,6 @@
 import {lessons} from './lessons.js';
-export const revision = '2d228630ba1446365f614a108cb8252f1feda202';
+import {newChapters} from './newChapters.js';
+export const revision = 'f7ce8c02d6e3c8f0d980a44c57bcc41a40254349';
 export const sourceRoot = `https://github.com/emilkowalski/skills/blob/${revision}/skills`;
 export const chapters = [
 {
@@ -94,7 +95,7 @@ export const chapters = [
   [
    "性能：先理解代价，再相信“流畅”",
    "浏览器大致经历布局、绘制、合成。transform 与 opacity 通常更容易走合成路径；width、height、padding 等可能反复触发布局和绘制。它们是成本不同的工具：真实手风琴若要推开下文，单纯缩放并不能替代高度变化。",
-   "原文提醒：在包含很多子项的父元素上逐帧更新可继承 CSS 变量，可能扩大样式重算；只让必要元素更新 transform 可以缩小范围。也提醒 Motion 的 x/y 简写、requestAnimationFrame 更新和完整 transform 字符串可能走不同执行路径。库版本、属性与浏览器都会影响结果，不能从写法直接保证 GPU 加速。",
+   "原文提醒：在包含很多子项的父元素上逐帧更新可继承 CSS 变量，可能扩大样式重算；只让必要元素更新 transform 可以缩小范围。新版原文还补充版本边界：Motion 14.2 起，HTML 元素的 x/y/scale/rotate 独立变换可走加速路径；旧版在页面繁忙时可考虑完整 transform 字符串。布局动画、onUpdate、惯性与逐帧 motion value 仍需检查主线程工作。浏览器与使用方式也会影响结果，不能只凭属性名保证 GPU 加速。",
    "预先确定的 CSS 或 WAAPI（Web Animations API，浏览器提供的程序化动画接口）动画，在符合合成条件时可能在主线程忙碌期间继续运行；JavaScript 逐帧更新则容易被长任务打断。先录制真实操作，关联脚本、布局与掉帧，再选择工具。裁切和模糊也要测量；对于原文中语气绝对的性能说法，本书将其作为有适用条件的优化建议来解释。"
   ],
   [
@@ -538,9 +539,19 @@ export const chapters = [
   "撤销 Undo"
  ],
  ...lessons["ask-sonner"]
-}
+},
+...newChapters
 ];
 export const glossary = [
+ ['编排','Choreography','决定多个运动对象的角色、先后、重叠和静止，让同一事件成为清楚的一次回应。','choreograph'],
+ ['并行','Together','相互关联的变化同时开始，例如退出项淡出时兄弟项立即补位。','choreograph'],
+ ['重叠','Overlap','后一个动作在前一个结束前启动；适合有阅读顺序但能同时显示的内容。','choreograph'],
+ ['顺序','Sequence','前后交接有明确理由，通常在同时显示会相互干扰时使用。','choreograph'],
+ ['指针捕获','Pointer capture','手势开始后继续向对象发送指针事件，即使指针离开它的可见边缘。','gestures'],
+ ['释放速度','Release velocity','松手时沿特定轴的运动速度，需明确方向与单位，用于决策和后续运动。','gestures'],
+ ['隐藏初态','Hidden start state','等待动画显示的不可见起点；删除动画时也要恢复可见状态。','remove-animations'],
+ ['来源','Provenance','说明一条设计规则依据哪句用户表达、哪个 diff 或哪次确认，避免把推断当事实。','learn-taste'],
+ ['适用范围','Scope','规则适用的对象、情境与例外；过度推广可能误伤其他合法设计。','learn-taste'],
  ['缓动','Easing','描述时间如何映射到运动进度；曲线斜率表示进度变化的速度。','animate'],
  ['弹簧','Spring','根据当前位置、速度和目标持续求解的运动模型；可以没有反弹。','apple-design'],
  ['阻尼','Damping','消耗运动能量、控制振荡与收敛的参数；不是时长的同义词。','apple-design'],

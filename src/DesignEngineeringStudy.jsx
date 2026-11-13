@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import Demo,{Easing} from './Demos';
 import {sourceRoot} from './content';
+import {TooltipStudy} from './LearningLabs';
 
 const coverage=[
  ['核心哲学','品味训练、细节累积、美感的产品价值',0],
@@ -23,6 +24,7 @@ export function ChapterGuide({chapter}){return <div className="chapter-guide"><h
 function ClipStudy(){const [visible,setVisible]=useState(45);return <div className="inline-study"><h3>观察裁切：内容不动，可见范围改变</h3><p>先预测 0% 与 100% 会发生什么，再拖动滑块。背景保留完整占位，蓝色副本只改变可见范围。</p><div className="clip-study" aria-hidden="true"><div>同一份内容 · 始终完整</div><div style={{clipPath:`inset(0 ${100-visible}% 0 0)`}}>同一份内容 · 始终完整</div></div><label className="range-label"><span>可见比例<output>{visible}%</output></span><input type="range" aria-label="裁切可见比例" min="0" max="100" value={visible} onChange={e=>setVisible(+e.target.value)}/></label><div className="readout" role="status"><code>clip-path: inset(0 {100-visible}% 0 0)</code><span>右侧裁去 {100-visible}%</span></div><p>标签高亮可以把“选中配色”的整组副本裁到当前标签处，避免文字、背景各自变色时不同步。长按确认、滚动揭示和图片对比，也是在改变这条可见边界；真实交互仍需另外处理提交、取消或指针事件。</p></div>}
 
 export default function DesignEngineeringStudy({section,reduce}){
+ if(section===4)return <TooltipStudy/>;
  if(section===1)return <div className="reading-table"><table><caption>原作者的频率分层 · 用于判断的经验量级</caption><thead><tr><th scope="col">场景</th><th scope="col">建议</th><th scope="col">保护什么</th></tr></thead><tbody><tr><td>每天上百次／键盘快捷操作</td><td>直接呈现</td><td>效率与连续思路</td></tr><tr><td>每天几十次</td><td>移除或极轻微反馈</td><td>不反复索取注意力</td></tr><tr><td>偶尔打开的菜单、抽屉</td><td>短暂且有目的的运动</td><td>状态与空间关系</td></tr><tr><td>首次引导、罕见完成</td><td>允许适度惊喜</td><td>理解与情绪记忆</td></tr></tbody></table></div>;
  if(section===3)return <div className="inline-study"><h3>只改曲线，先预测再播放</h3><p>把时间移到 50%。先猜哪种曲线已走得最远，再切换 Ease-out 与 Ease-in 对照。总时长相同；变化的是输入后最初一瞬的进度。</p><Easing reduce={reduce}/></div>;
  if(section===5)return <div className="inline-study"><h3>试一次释放，也试一次重新抓住</h3><p>先用按钮推动，再在运动途中拖动它。改变阻尼，比较反弹与收敛。“推向右”也提供键盘可用的替代操作。此处为浏览器弹簧实验，参数是下方显示的物理配置；它不是正文两组配置的逐值复现，也不是所有手势边界的完整实现。</p><Demo type="spring" reduce={reduce}/></div>;

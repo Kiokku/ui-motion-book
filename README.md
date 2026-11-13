@@ -1,6 +1,6 @@
 # 感知之书 · The Art of Feel
 
-一本面向中文初学者的 UI 与动效设计交互电子书。基于 Emil Kowalski skills 的固定源码快照，每个 skill 一章，共 15 章。独立教学编写，非官方出版物。
+一本面向中文初学者的 UI 与动效设计交互电子书。基于 Emil Kowalski skills 的固定源码快照，每个 skill 一章，共 19 章。独立教学编写，非官方出版物。
 
 ## 阅读
 
@@ -31,11 +31,13 @@
 
 源码：<https://github.com/emilkowalski/skills>
 
-读取日期：2026-10-19。
+读取日期：2026-11-13。
 
-固定提交：`2d228630ba1446365f614a108cb8252f1feda202`。
+固定提交：`f7ce8c02d6e3c8f0d980a44c57bcc41a40254349`。
 
 原文快照位于 `sources/emilkowalski-skills/`，MIT 许可保留在原目录及 `public/SOURCE-LICENSE.txt`。每章链接固定提交中的对应 SKILL.md，避免链接跟随上游变化。原作者经验规则与本书的教学解释、简化模型分开呈现。
+
+另参考 [AI for UI 公开 skill 页面](https://aiforui.dev/skills)的用途说明、前后对比和提问方式，按本书学习目标重制实验；不含其另售课程内容。官网目前列出 18 个技能，仓库仍保留 write-swift，本书按仓库收录 19 章。
 
 教学方法借鉴用户提供的 Matt Pocock teach 哲学：可信知识、主动练习、反馈、检索与间隔复习，不沿用其构建形式。
 
@@ -45,13 +47,17 @@ React + Vite；CSS、SVG、WAAPI/Motion 构建动效。Sonner 提供真实通知
 
 `src/content.js`：章节元数据、第一章和术语。
 
-`src/lessons.js`：其余十四章的递进正文、案例与回忆题。
+`src/lessons.js`：原有十四章的递进正文、案例与回忆题。
+
+`src/newChapters.js`：新增 choreograph、gestures、remove-animations 与 learn-taste 四章。
+
+`src/SkillBrief.jsx`：全书 19 章的适用场景、产出、提问示例与实验观察问题。
 
 `src/ChapterStudy.jsx`、`src/vocabulary.js`：主题导航、案例表、回忆反馈和 91 条可检索词典。
 
 `src/reference.js`：每章的代码、参数或判断流程速查。
 
-`src/Demos.jsx`：15 类教学实验。
+`src/Demos.jsx`、`src/LearningLabs.jsx`：19 类章首实验，以及提示气泡、弹层、速度投射和侧栏属性对比。
 
 `src/main.jsx`：阅读、目录、笔记、复习与来源页面。
 
@@ -63,6 +69,14 @@ React + Vite；CSS、SVG、WAAPI/Motion 构建动效。Sonner 提供真实通知
 
 原生运行时、帧预算、移动视口是明确标注的教学模型，不是设备性能检测。未以浏览器测试替代 Expo Release 构建或手机实测。
 
-## 内容修订 · 2026-10-20
+## 内容修订 · 2026-11-13
+
+同步上游 f7ce8c0，保留原 15 章顺序与稳定 ID，在第五篇新增四章。全书共 169 个递进小节；新章包含 32 节正文、四个可操作实验、四张案例表、12 道解释性回忆题及章末练习。19 章均新增任务现场说明，右侧原文按新版主题补全。
+
+吸收官网的“一个案例说明一个问题”方法，补充提示组首次等待、弹层前后对比、速度投射吸附与侧栏布局语义实验。同步修正 Motion 14.2 前后的独立变换加速说明；本书运行依赖仍为 Motion 12，未混同内容更新与依赖升级。中文继续按 Humanizer-zh 的保留事实、范围与归因原则审校。
+
+`npm test` 共 31 项，覆盖新实验的真实按键、指针跟踪与取消、投射计算、删项时间线、规则确认，以及全书响应式、来源、无障碍和静阅模式。真机触感与 Expo / Swift 编译仍需对应平台验证。
+
+## 历史内容修订 · 2026-10-20
 
 序章补充 Skill 背景与可操作的开发阶段示例；第一章已按原文主要主题扩写为递进样章，增加曲线、弹簧和裁切实验，以及解释性回忆与原文主题索引。其余十四章现已按原文主题补为 124 个递进小节，新增十四份案例表、42 道解释性回忆、主题导航与原文映射；词汇章含 91 个可检索原文词条。详见 [首章内容审查](docs/content-review-2026-10-20.md) 与 [十四章补全记录](docs/content-expansion-2026-10-20.md)。

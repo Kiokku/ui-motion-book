@@ -163,7 +163,7 @@ test('expanded first chapter supports deep navigation, clipping and recall feedb
  await expect(page.locator('.clip-study>div').last()).toHaveCSS('clip-path','inset(0px 25% 0px 0px)');
  await expect(page.locator('.inline-study .readout').last()).toContainText('右侧裁去 25%');
  await page.getByText('弹簧一定要弹吗？什么情境下比固定曲线更合适？',{exact:true}).click();
- await expect(page.locator('.recall-study details').first().locator('p')).toContainText('足够阻尼可以没有反弹');
+ await expect(page.locator('.recall-study details').first().locator('p')).toContainText('阻尼足够大时，弹簧可以不反弹');
  await page.getByText('回到原文：本章主题索引',{exact:true}).click();
  await page.locator('.coverage-index').getByRole('link',{name:'手势与拖动',exact:true}).click();
  await expect(page.locator('#section-7')).toBeInViewport();
