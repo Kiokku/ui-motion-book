@@ -1,0 +1,26 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "side-tab",
+        "value": "*",
+        "files": [
+          "src/styles.css"
+        ],
+        "createdAt": "2026-11-13T10:18:09.378Z",
+        "reason": "Agent review: .command-selection at line 790 is the functional current-row marker in the keyboard highlight teaching experiment, not a decorative card accent."
+      },
+      {
+        "rule": "layout-transition",
+        "value": "*",
+        "files": [
+          "src/LearningLabs.jsx"
+        ],
+        "createdAt": "2026-11-13T10:18:09.395Z",
+        "reason": "Agent review: PropertyStudy intentionally animates margin-left in the labeled layout-versus-transform teaching comparison; changing it to transform would remove the behavior being taught."
+      }
+    ]
+  }
+}
